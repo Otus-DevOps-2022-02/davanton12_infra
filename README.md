@@ -10,14 +10,14 @@ ssh -i ~/.ssh/appuser -J appuser@51.250.66.252 appuser@10.128.0.30
 задание 2: \
 alias someinternalhost='ssh -i ~/.ssh/appuser -J appuser@51.250.66.252 appuser@10.128.0.30'
 
-задание 3: \
-bastion_IP = 51.250.66.252 \
+задание 3:
+bastion_IP = 51.250.66.252
 someinternalhost_IP = 10.128.0.30
 
 Лекция 6
 
 Задание 1: \
-testapp_IP = 51.250.67.179 \
+testapp_IP = 51.250.67.179
 testapp_port = 9292
 
 Задание 2:
