@@ -44,7 +44,7 @@ yc compute instance create \
   --zone ru-central1-a \
   --metadata-from-file user-data=./metadata.yaml
 
-## Лекциия 7
+## Лекция 7
 
 - Поработал с Packer
 - Запек immutable образ с приложением, которое стартует при разворачивании VM (immutable.json)
