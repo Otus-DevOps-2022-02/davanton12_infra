@@ -1,0 +1,11 @@
+#cloud-config
+     timezone: Europe/Moscow
+
+     users:
+       - name: appuser
+         groups: sudo
+         homedir: /home/appuser
+         shell: /bin/bash
+         sudo: ['ALL=(ALL) NOPASSWD:ALL']
+         ssh-authorized-keys:
+          - "ssh-rsa AAAksdflskndfksndlfnsmfBAAABA appuser"
