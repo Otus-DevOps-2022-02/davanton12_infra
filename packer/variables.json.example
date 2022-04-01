@@ -1,6 +1,6 @@
 {
     "folder_id": "b1343434fackfackeekvbv",
     "source_image_family": "ubuntu-1604-lts",
-    "service_account_key_file": "/home/user/key.json",
+    "service_account_key_file": "./key.json",
     "preemptible": "true"
 }
