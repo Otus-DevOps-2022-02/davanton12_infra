@@ -1,0 +1,19 @@
+{
+  "builds": [
+    {
+      "name": "yandex",
+      "builder_type": "yandex",
+      "build_time": 1649356089,
+      "files": [
+        {
+          "name": "",
+          "size": 0
+        }
+      ],
+      "artifact_id": "fd8lm4nr85q6uvmkpgoo",
+      "packer_run_uuid": "b2a4041d-5930-55ec-4b14-c791bc51f317",
+      "custom_data": null
+    }
+  ],
+  "last_run_uuid": "b2a4041d-5930-55ec-4b14-c791bc51f317"
+}
