@@ -112,3 +112,20 @@ yc compute instance create \
   required_version = ">= 0.35"
   }
   ```
+
+## Лекция 9
+
+ - Создали отдельные образы для приложений app и db в packer
+ - Создали отдельные конфигурационные файлы для приложений app и db в terraform
+ - Познакомились с модулями
+ - Узнали, что модули можно подключать из разных реп
+ - Настроили хранение стейт файла в удаленном бекенде используя Yandex Object Storage
+
+ Команды:
+  ```
+  yc iam service-account list
+	yc iam access-key create --service-account-name <name>
+	terraform get
+	terraform init -reconfigure
+	terraform init -migrate-state
+  ```
