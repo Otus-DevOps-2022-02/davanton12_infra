@@ -1,7 +1,16 @@
-resource "yandex_compute_instance" "app" {
-  name = "reddit-app"
+terraform {
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+    }
+}
+required_version = ">= 0.35"
+}
+
+resource "yandex_compute_instance" "db" {
+  name = "reddit-db"
   labels = {
-    tags = "reddit-app"
+    tags = "reddit-db"
 }
 
   resources {
@@ -12,7 +21,7 @@ resource "yandex_compute_instance" "app" {
   boot_disk {
     initialize_params {
       # Указать id образа созданного в предыдущем домашем задании
-      image_id = var.app_disk_image
+      image_id = var.db_disk_image
     }
   }
 
