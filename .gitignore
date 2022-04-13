@@ -5,3 +5,4 @@ metadata.yaml
 *.tfstate.backup
 *.tfvars
 .terraform/
+backend.tf
