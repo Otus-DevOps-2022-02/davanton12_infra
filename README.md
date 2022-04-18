@@ -129,3 +129,38 @@ yc compute instance create \
 	terraform init -reconfigure
 	terraform init -migrate-state
   ```
+## Лекция 10
+
+ - Рассмотрели инструмен ansible
+ - Рассмотрели inventory файлы
+ - Рассмотрели ansible.cfg
+ - Проверили ввыполнение различных команд
+ - Написали простой плейбук и потестили его
+ - Задание со свездочкой не привело к успешным решениям с моей стороны. То, для чего мы на этом курсе (ищем помощи и ответов), приходится искать самому, заниматься самообразованием. В Интернете нашел только нормальное, человеческое описание, для чего нужен динамический inventory, но как его реализовать через скрипт и потом какую команду запустить, по пунктам никто не рассказывает, как-будто какой-то секрет. Нашел у коллеги в репке, как он сделал, но там простыня из кода на питоне и в README содранный текст из статьи, которую предлагают почитать в ДЗ(мутная статья).
+
+ Установка Ansible:
+  ```
+$ sudo apt update
+$ sudo apt install software-properties-common
+$ sudo add-apt-repository --yes --update ppa:ansible/ansible
+$ sudo apt install ansible
+  ```
+
+ Команды:
+  ```
+ansible dbserver -m command -a uptime
+ansible app -m ping
+ansible all -m ping -i inventory.yml
+ansible app -m command -a 'ruby -v'
+ansible app -m shell -a 'ruby -v; bundler -v'
+ansible db -m command -a 'systemctl status mongod'
+ansible db -m shell -a 'systemctl status mongod'
+ansible db -m systemd -a name=mongod
+ansible db -m service -a name=mongod
+ansible app -m shell -a 'sudo apt update && sudo apt install -y git'
+ansible app -m git -a 'repo=https://github.com/express42/reddit.git dest=/home/ubuntu/reddit'
+ansible app -m shell -a 'rm -rf /home/ubuntu/reddit'
+ansible app -m command -a 'rm -rf ~/reddit'
+ansible app -m command -a 'git clone https://github.com/express42/reddit.git /home/ubuntu/reddit'
+ansible-playbook clone.yml
+  ```
