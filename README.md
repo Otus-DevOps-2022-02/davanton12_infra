@@ -164,3 +164,23 @@ ansible app -m command -a 'rm -rf ~/reddit'
 ansible app -m command -a 'git clone https://github.com/express42/reddit.git /home/ubuntu/reddit'
 ansible-playbook clone.yml
   ```
+
+## Лекция 11
+
+ - Рассмотрели подход в одном плейбуке в одном таске
+ - Рассмотрели подход в одном плейбуке в нескольких тасках
+ - Рассмотрели подход с набором плейбуков
+ - Подготовили плейбуки для app и db для packer
+ - Cоздал bash скрипт для подстановки новых ip инвентори и app.yaml
+
+ Команды:
+  ```
+ansible-playbook reddit_app.yml --check --limit app --tags deploy-tag
+ansible-playbook reddit_app.yml--limit app --tags deploy-tag
+
+ansible-playbook reddit_app2.yml --tags db-tag --check
+ansible-playbook reddit_app2.yml --tags db-tag
+
+ansible-playbook site.yml --check
+ansible-playbook site.yml
+  ```
