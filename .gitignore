@@ -6,3 +6,4 @@ metadata.yaml
 *.tfvars
 .terraform/
 backend.tf
+*.retry
