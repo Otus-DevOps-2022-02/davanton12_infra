@@ -184,3 +184,24 @@ ansible-playbook reddit_app2.yml --tags db-tag
 ansible-playbook site.yml --check
 ansible-playbook site.yml
   ```
+
+## Лекция 12
+
+ - Рассмотрели подход c ролями
+ - Рассмотрели подход с ansible-galaxy
+ - Рассмотрели подход по средам со своими переменными, инвентори
+ - Поработали с vault
+ - Cоздал bash скрипт для каждой среды, для прохождения валидации
+
+ Команды:
+  ```
+ansible-galaxy -h
+ansible-galaxy init db
+tree db
+ansible-playbook playbooks/site.yml
+ansible-playbook -i environments/prod/inventory playbooks/site.yml --check
+ansible-galaxy install -r environments/stage/requirements.yml
+ansible-vault encrypt environments/prod/credentials.yml
+ansible-vault edit <file>
+ansible-vault decrypt <file>
+  ```
