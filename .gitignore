@@ -7,3 +7,4 @@ metadata.yaml
 .terraform/
 backend.tf
 *.retry
+jdauphant.nginx
