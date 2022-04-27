@@ -205,3 +205,31 @@ ansible-vault encrypt environments/prod/credentials.yml
 ansible-vault edit <file>
 ansible-vault decrypt <file>
   ```
+  
+## Лекция 13
+
+ - Рассмотрели работу с vagrant
+ - Рассмотрели подход с использованием vagrant provision
+ - Рассмотрели работу с molecule для тестирования
+
+ Команды:
+  ```
+vagrant -v
+vagrant box list
+vagrant status
+vagrant ssh appserver
+ping -c 2 10.10.10.10
+vagrant provision dbserver
+telnet 10.10.10.10 27017
+cat .vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory
+vagrant destroy -f
+vagrant up
+pip install -r requirements.txt
+molecule --version
+molecule init scenario --scenario-name default -r db -d vagrant
+molecule create
+molecule list
+molecule login -h instance
+molecule converge
+molecule verify
+  ```
